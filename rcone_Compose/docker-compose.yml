@@ -1,0 +1,15 @@
+version: '3'
+# Other docker-compose examples in /examples
+
+services:
+  rcon:
+    image: itzg/rcon
+    ports:
+      - "4326:4326"
+      - "4327:4327"
+    volumes:
+      - "rcon:/MinecraftDB/opt/rcon-web-admin/db"
+    restart: always
+
+volumes:
+  rcon:
